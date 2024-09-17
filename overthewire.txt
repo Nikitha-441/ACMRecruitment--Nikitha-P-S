@@ -1,0 +1,378 @@
+Over The Wire Bandit
+
+level 0:
+
+command use: 
+
+ssh bandit0@bandit.labs.overthewire.org -p 2220
+
+and then type in the password: bandit0
+
+description:
+
+ssh command provide a secure encrypted connection between two hosts over an insecure network. Here, host to which you need to connect is bandit.labs.overthewire.org and user name is bandit0 and port is 2220
+
+
+
+level 1:
+
+command use: 
+
+ssh bandit0@bandit.labs.overthewire.org -p 2220
+ls
+cat readme
+
+description:
+
+login into level 0 and ls command is used to list all files under a directory. Then use cat to read the file. 
+
+password: ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
+
+
+level 2:
+
+command use:
+
+ssh bandit1@bandit.labs.overthewire.org -p 2220
+ls
+cat ./-
+
+description:
+
+login to level 1 through ssh and enter password. By default the directory you work in is the home directory use ls to list all the files present in it. 
+file name cannot start with - so in order to call the file we use ./ to add the path.
+
+password: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+
+level 3:
+
+command use: 
+
+ssh bandit2@bandit.labs.overthewire.org -p 2220
+type in password
+ls
+cat "spaces in this filename"
+
+description:
+
+login to level 2 using ssh and enter password. Using ls we find that the file in current directory is spaces in this filename. When using cat if the filename contains spaces it will see each of the word as separate word. So, we put the filename in quotes
+
+password: MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+
+level 4: 
+
+command use: 
+
+ssh bandit3@bandit.labs.overthewire.org -p 2220
+type in password
+cd inhere/
+ls -alps
+cat ...Hiding-From-You
+
+description:
+
+Login into level 3 using ssh and enter password. cd is used to change directory to inhere. ls will not print hidden files So use ls -alps.
+
+password: 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+
+
+level 5:
+
+command use:
+
+ssh bandit4@bandit.labs.overthewire.org -p 2220
+type in password
+ls
+cd inhere
+ls
+file ./*
+cat ./-file07
+
+description:
+
+Login into level 4 using ssh and enter password. There are many files given. Among them one of them is human readable. 
+file ./*- it will give the data type. Find the file the file that is ASCII or text file and read them using cat.
+
+password: 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+
+level 6:
+
+command use:
+
+ssh bandit5@bandit.labs.overthewire.org -p 2220
+type in password
+ls
+cd inhere
+ls
+find ./ -type f -size 1033c ! -executable
+cat ./maybehere07/.file2
+
+description:
+
+login into level 5 using ssh and enter password. Use ls to list the file. Change directory to inhere and we understand that there are many files in inhere directory by using ls again.  We use find to find a specific file. Then read the file using cat
+
+password: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+
+
+
+level 7:
+
+command use:
+
+ssh bandit6@bandit.labs.overthewire.org -p 2220
+type in password
+find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null
+cat /var/lib/dpkg/info/bandit7.password
+
+description:
+
+login into level 6 and enter password. We use find to find the file. As we don't know where the file is located we give simple / and not./ as it may not be even in the home directory. Use find and write the condition 2>/dev/null 2 stand for stderr which is for error messages and dev/null will delete. So it will delete all the error messages. Then use cat to read. 
+
+password:morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+
+
+level 8:
+
+command use:
+
+ssh bandit7@bandit.labs.overthewire.org -p 2220
+type in password
+ls
+grep "millionth" data.txt
+
+description:
+
+Login into level 7 and enter password. Grep is used to search within a text file. 
+
+password: dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+
+level 9:
+
+command use:
+
+ssh bandit8@bandit.labs.overthewire.org -p 2220
+type in password
+ls
+sort data.txt| uniq -u
+
+description:
+login in into level 8 and enter password. Use sort to sort the text and uniq-u will only print the unique value.
+
+password:4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+
+level 10:
+
+command use:
+
+ssh bandit9@bandit.labs.overthewire.org -p 2220
+type in password
+strings data.txt | grep "="
+
+description:
+
+login into level 9 and enter a password. data.txt is a binary file, strings convert it into string and then use grep to search the text.
+
+password: FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+
+level 11:
+
+command use:
+
+ssh bandit10@bandit.labs.overthewire.org -p 2220
+type in password
+ls
+base64 -d data.txt
+
+description:
+
+login into level 10 and enter a password. base64 -d will decode base64 code.
+
+password:dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+
+level 12:
+
+command use:
+
+ssh bandit11@bandit.labs.overthewire.org -p 2220
+type  in password
+ls
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+
+description:
+login into level 11 and enter a password. tr is used to modify text. It will convert all uppercase to lowercase and vice versa and rotate by 13 digits.
+
+password:7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+
+level 13:
+
+command use:
+
+ssh bandit12@bandit.labs.overthewire.org -p 2220
+type in command
+ls
+cd /tmp
+mktemp -d
+cd /tmp/tmp.a7nWcygzoO
+cp ~/data.txt .
+ls
+mv data.txt hexadump
+xxd -r hexadump converted
+ls
+file converted
+mv converted converted.gz
+gzip -d converted.gz
+file converted
+mv converted converted.bz2
+bzip2 -d converted.bz2
+file converted
+mv converted converted.gz
+gzip -d converted.gz
+file converted 
+mv converted converted.tar
+tar -xf converted.tar
+ls
+file data5.bin
+tar -xf data5.bin
+ls
+file data6.bin
+mv data6.bin data6.bin.bz2
+bzip2 -d data6.bin.bz2
+lsrename
+file data6.bin
+mv data6.bin data6.bin.tar
+tar -xf data6.bin.tar
+ls
+file data8.bin
+mv data8.bin data8.bin.gz
+gzip -d data8.bin.gz
+file data8.bin
+cat data8.bin
+
+
+description:
+
+login into level 12 and enter password. Change directory to temporary by using cd /tmp. Create a temporary directory inside it by using mktemp -d. 
+Copy file data.txt from home directory into this temporary directory. Rename the file by using mv. use file to understand the type of file and decompresss.
+rename the filename according to the type and then unzip until we get ascii text.
+ 
+password:FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
+
+level 14:
+
+command: 
+  
+ssh bandit13@bandit.labs.overthewire.org -p 2220
+type in password
+ls
+ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
+cat /etc/bandit_pass/bandit14
+
+Description:
+
+login into level 13 and enter password. In level 13 we are not given a password for level 14 but we are given a private key. We need to login into level 14 using it without a password. We can login using -i (identiy ) option in ssh command.
+
+password: MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+
+level 15:
+
+command:
+ssh bandit14@bandit.labs.overthewire.org -p 2220
+type in password
+telnet localhost 30000
+MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+
+description: 
+Login into level 14 and enter password. To get the password for next level use telnet and connect to port 30000
+
+password: 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+
+Level 16:
+
+command:
+
+ssh bandit15@bandit.labs.overthewire.org -p 2220
+type in password
+openssl  s_client localhost:30001
+8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+
+description:
+Login into level 15 and enter password. We use openssl s_client to connect to the server as a client and the type in the host name and port name.
+
+
+password:kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
+
+
+level 17:
+
+commands:
+
+ssh bandit16@bandit.labs.overthewire.org -p 2220
+type in password
+nmap -sV localhost -p 31000-32000
+ncat --ssl localhost 31790
+kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
+cd /tmp/random_sshkey
+/tmp/random_sshkey$ touch private.key
+ nano private.key
+ ssh -i private.key bandit17@bandit.labs.overthewire.org -p 2220
+
+
+description:
+Login into level 16 and enter password. We use nmap to find the port in which ssl file is present and -sV is used to scan the service version. Execpt for one all other had echo.Echo sends back whatever you send it, so we don't need it. By this we can understand which port to use. We use ncat to establish a connection
+
+
+
+level 18:
+
+commands:
+
+ssh bandit17@bandit.labs.overthewire.org -p 2220
+type in password
+diff password.old password.new
+
+description:
+diff command prints the difference between the two file
+
+password: x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO
+
+
+level 19:
+
+commands:
+
+ssh bandit18@bandit.labs.overthewire.org -p 2220 ls
+type in password
+ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme
+type in password
+
+description:
+As we will get logged out if we login. We can use the list file and read file while using ssh itself
+
+password: cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8
+
+
+
+level 20:
+
+commands:
+
+ssh bandit19@bandit.labs.overthewire.org -p 2220
+type in password
+ls
+file bandit20-do
+ls -alps
+./bandit20-do ls /etc/bandit_pass
+./bandit20-do cat /etc/bandit_pass/bandit20
+
+description:
+
+login into level 19 and enter password. There is a file bandit20-do which is a setuid file. Using ls -alps we can find the owner and group. Owner is bandit20. The file can only be read by bandit20. We use the above commands to acess as bandit20.
+
+
+
+password:0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO
+
+
+
+
+
