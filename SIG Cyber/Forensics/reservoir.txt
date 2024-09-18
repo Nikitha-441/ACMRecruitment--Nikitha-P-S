@@ -1,0 +1,12 @@
+To find the he name of the dam associated with this reservoir (Location of the picture) we can do the following:
+
+1) Right click on the image and select properties
+- This can give us GPS coordinates and using google maps we can find the location. 
+
+2) Using online tools to get exif data
+
+I wasn't able to find any location using the above
+
+3)Using google image search- This can give similar images:
+- The result was Kava island,Palakad. chuliyar dam and malampuzha dam 
+Out of which chuliyar dam seems to be more accurate
