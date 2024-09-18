@@ -1,0 +1,75 @@
+You start with a binary number: 1100101011110010
+
+Logical Gates Room
+
+1) AND gate with 1010110010101101
+- 1000100010100000
+
+2)OR gate with 0111001100110011
+- 1111101110110011
+
+3)XOR gate with 1101110111001110 (XOR gives 1 if they are different and 0 if they are smae)
+- 0010011001111101
+
+4) NOT gate applied to the result of the previous XOR operation
+- 1101100110000010
+
+
+
+Binary Conversion Room
+
+1) binary of result of logic gate room is: 55682 
+
+2) Add 123 to the decimal number: 55,805
+
+3) Multiply the result by 7: 3,90,635
+
+4) Convert the final result back into binary: 1011111010111101011
+
+
+
+Weighted Binary Balancing
+
+1001-9
+1100- 12
+1110- 14
+1010- 10
+0111-7
+0101-5
+0011-3
+1111- 15
+1101- 13
+1011- 11
+0110- 6
+0100- 4
+0010- 2
+0001- 1
+
+1111 is the heaviest
+1011111010111101011 
+
+
+Binary Tree Navigation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
