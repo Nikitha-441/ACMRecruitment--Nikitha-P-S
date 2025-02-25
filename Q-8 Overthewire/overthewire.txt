@@ -219,6 +219,7 @@ mv data.txt hexadump
 xxd -r hexadump converted
 ls
 file converted
+check if it is gzip or bzip2- use file or check manuallyif it starts with 1f8b-gzip, 42 5a 68- bzip2
 mv converted converted.gz
 gzip -d converted.gz
 file converted
@@ -278,7 +279,7 @@ level 15:
 command:
 ssh bandit14@bandit.labs.overthewire.org -p 2220
 type in password
-telnet localhost 30000
+telnet localhost 30000, type in the password
 MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
 
 description: 
@@ -311,9 +312,10 @@ type in password
 nmap -sV localhost -p 31000-32000
 ncat --ssl localhost 31790
 kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
-cd /tmp/random_sshkey
-/tmp/random_sshkey$ touch private.key
- nano private.key
+cd /tmp/random_sshkey (make some random temp directory)
+/tmp/random_sshkey$ touch private.key (create empty file)
+ nano private.key 
+
  ssh -i private.key bandit17@bandit.labs.overthewire.org -p 2220
 
 
