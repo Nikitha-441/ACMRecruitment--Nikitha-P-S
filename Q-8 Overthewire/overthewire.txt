@@ -345,9 +345,11 @@ kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
 cd /tmp/random_sshkey (make some random temp directory)
 /tmp/random_sshkey$ touch private.key (create empty file)
  nano private.key 
-
- ssh -i private.key bandit17@bandit.labs.overthewire.org -p 2220
-
+chmod 400 private.key
+chmod +x private.key
+chmod 600 private.key
+ ssh -i private.key bandit17@blocalhost -p 2220
+cat /etc/bandit_pass/bandit17
 
 description:
 Login into level 16 and enter password. We use nmap to find the port in which ssl file is present and -sV is used to scan the service version. Execpt for one all other had echo.Echo sends back whatever you send it, so we don't need it. By this we can understand which port to use. We use ncat to establish a connection
