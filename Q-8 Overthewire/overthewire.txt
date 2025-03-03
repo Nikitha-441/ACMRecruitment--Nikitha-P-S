@@ -352,7 +352,7 @@ cd /tmp/random_sshkey (make some random temp directory)
 description:
 Login into level 16 and enter password. We use nmap to find the port in which ssl file is present and -sV is used to scan the service version. Execpt for one all other had echo.Echo sends back whatever you send it, so we don't need it. By this we can understand which port to use. We use ncat to establish a connection
 
-
+password: EReVavePLFHtFlFsjn3hyzMlvSuSAcRD
 
 level 18:
 
